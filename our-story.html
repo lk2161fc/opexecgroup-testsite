@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story - OpExec Group</title>  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>  <style>
+    .hero-section {
+      background-image: url('images/hero-background.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+    .mobile-menu {
+      display: none;
+    }
+    .mobile-menu.show {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">          <a href="index.html" class="flex-shrink-0 flex items-center text-xl font-bold text-blue-600">
+            <img src="images/logo.png" alt="OpExec Group" class="h-8 w-auto mr-2">
+            OpExec Group
+          </a>
+          <div class="hidden sm:-my-px sm:ml-10 sm:flex sm:space-x-8">
+            <a href="index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Home</a>
+            <a href="our-services.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Our Services</a>
+            <a href="our-story.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900">Our Story</a>
+            <a href="contact-us.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Contact Us</a>
+          </div>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="flex items-center sm:hidden">
+          <button id="mobile-menu-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state -->
+    <div id="mobile-menu" class="mobile-menu sm:hidden">
+      <div class="pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300">Home</a>
+        <a href="our-services.html" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300">Our Services</a>
+        <a href="our-story.html" class="block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base font-medium text-blue-700 bg-blue-50">Our Story</a>
+        <a href="contact-us.html" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section relative">
+    <div class="hero-overlay"></div>
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+        Our Story
+      </h1>
+      <p class="mt-2 text-2xl font-semibold text-blue-600">
+        The Team Behind OpExec Group
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center md:space-x-12">
+        <div class="md:w-1/2 mb-8 md:mb-0">          <img src="images/our-story.jpg" 
+               alt="Our Team" 
+               class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        <div class="md:w-1/2">
+          <div class="prose lg:prose-lg">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Who We Are</h2>
+            <p class="text-lg text-gray-700 mb-4">
+              Founded in 2023, we are proud to be a female-owned and operated small business. According to Gartner, "In 2023, 26% of executive level positions in the supply chain were held by women, with women representing 41% of the industry workforce overall". We are extremely proud and humbled to be part of that 26% and will continue mentoring and sharing our experience in an effort to grow that number in coming years.
+            </p>
+            <p class="text-lg text-gray-700 mb-4">
+              At OpExec Group, we are passionate about helping companies grow and succeed. With over 20 years of experience in supply chain and operations executive leadership, we have the expertise to help businesses navigate the challenges of growth.
+            </p>
+            <p class="text-lg text-gray-700 mb-4">
+              Our team of experts have a proven track record of helping businesses achieve their goals and reach new heights.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Why Choose OpExec Group</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <!-- Our Experience -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-semibold text-gray-900 mb-4">Our Experience</h4>
+            <p class="text-gray-700">
+              OpExec Group has over 20 years of experience in the supply chain and operations
+              field and is passionate about helping businesses like yours. We'll assess your
+              needs, implement solutions, and help you navigate the unknowns that come with
+              the pivotal time between the start of your business and scaled growth. Partnering
+              with us will bring a sense of security during this exciting time.
+            </p>
+          </div>
+          
+          <!-- Our Approach -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-semibold text-gray-900 mb-4">Our Approach</h4>
+            <p class="text-gray-700">
+              At OpExec Group, we bring a passion for helping businesses succeed. As the
+              founder, I saw a need for personalized service for start-up to mid-sized companies
+              that had the vision to bring a product to life but did not have experience in
+              product development or supply chain and operational management.
+            </p>
+            <p class="text-gray-700 mt-4">
+              We approach your needs as if they were our own. We start by learning about your
+              company and understanding what passion drives your business. For us to fully
+              engage in creating a personalized plan, we want to "feel" what brought the company
+              to life.
+            </p>
+          </div>
+        </div>
+        
+        <div class="mt-12">
+          <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">Our Values</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <!-- Integrity -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h5 class="text-lg font-semibold text-gray-900 mb-2">Integrity</h5>
+              <p class="text-gray-700">
+                We operate with transparency and honesty in every interaction. We believe in establishing long-term relationships built on trust.
+              </p>
+            </div>
+            
+            <!-- Innovation -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h5 class="text-lg font-semibold text-gray-900 mb-2">Innovation</h5>
+              <p class="text-gray-700">
+                We constantly seek creative solutions to complex supply chain challenges, embracing new technologies and methodologies.
+              </p>
+            </div>
+            
+            <!-- Excellence -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h5 class="text-lg font-semibold text-gray-900 mb-2">Excellence</h5>
+              <p class="text-gray-700">
+                We strive for the highest standards in our work, delivering results that exceed expectations and create lasting value.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="mt-16 text-center">
+          <div class="mt-8">
+            <a href="our-services.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700">
+              View Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">        <div class="flex items-center mb-4 md:mb-0">
+          <img src="images/logo.png" alt="OpExec Group" class="h-8 w-auto mr-2">
+          <span class="text-white text-xl font-semibold">OpExecGroup</span>
+        </div>
+        <nav class="flex flex-wrap justify-center md:justify-end space-x-6 text-sm mt-4 md:mt-0">
+          <a href="index.html" class="text-gray-300 hover:text-white">Home</a>
+          <a href="our-services.html" class="text-gray-300 hover:text-white">Our Services</a>
+          <a href="our-story.html" class="text-gray-300 hover:text-white">Our Story</a>
+          <a href="contact-us.html" class="text-gray-300 hover:text-white">Contact Us</a>
+        </nav>
+      </div>
+      <div class="mt-8 border-t border-gray-700 pt-4 md:flex md:items-center md:justify-between">
+        <p class="text-center text-base text-gray-400">COPYRIGHT © 2025 OPEXECGROUP - ALL RIGHTS RESERVED.</p>
+        <div class="mt-4 md:mt-0">
+          <a href="https://www.linkedin.com/company/opexec-group" target="_blank" rel="noopener" class="text-gray-400 hover:text-white">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="h-6 w-6 inline" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 z-50 hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0 text-gray-700 text-sm">
+        <h5 class="font-bold mb-1">This website uses cookies.</h5>
+        <p>We use cookies to analyze website traffic and optimize your website experience.
+           By accepting our use of cookies, your data will be aggregated with all other user data.</p>
+      </div>
+      <button id="accept-cookies" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium">
+        ACCEPT
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('show');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('show');
+          });
+        });
+      }
+
+      // Cookie consent
+      const cookieConsent = document.getElementById('cookie-consent');
+      const acceptCookies = document.getElementById('accept-cookies');
+      
+      if (cookieConsent && acceptCookies) {
+        if (!localStorage.getItem('cookiesAccepted')) {
+          cookieConsent.classList.remove('hidden');
+        }
+        
+        acceptCookies.addEventListener('click', function() {
+          localStorage.setItem('cookiesAccepted', 'true');
+          cookieConsent.classList.add('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
