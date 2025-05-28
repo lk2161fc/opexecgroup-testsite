@@ -7,7 +7,8 @@ This repository contains the official website for OpExec Group, a supply chain a
 - Optimized local images
 - Clean information architecture
 - Mobile-friendly navigation
-- Contact form and information
+- Functional contact form (using Formspree) that sends submissions to info@opexecgroup.com
+- Thank you page for form submission confirmation
 
 ## Pages
 - Home
@@ -19,4 +20,4 @@ This repository contains the official website for OpExec Group, a supply chain a
 The site is built with HTML5 and Tailwind CSS without any build tools, making it simple to maintain and update.
 
 ## Deployment
-The site is deployed using GitHub Pages and can be accessed at [https://yourusername.github.io/opexecgroup-testsite](https://yourusername.github.io/opexecgroup-testsite)
+The site is deployed using GitHub Pages and can be accessed at [https://lk2161fc.github.io/opexecgroup-testsite](https://lk2161fc.github.io/opexecgroup-testsite)

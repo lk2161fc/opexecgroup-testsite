@@ -135,16 +135,21 @@
           </div>
         </div>
         
-        <div class="md:w-1/2">
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Send Us a Message</h3>
-            <form class="space-y-6">
+        <div class="md:w-1/2">          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Send Us a Message</h3>            <form class="space-y-6" action="https://formspree.io/f/xzbndjyg" method="POST">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input type="text" name="name" placeholder="Name" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
                 <input type="email" name="email" placeholder="Email*" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required />
               </div>
               <input type="tel" name="phone" placeholder="Phone" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
-              <textarea name="message" rows="4" placeholder="How can we help?" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+              <textarea name="message" rows="4" placeholder="How can we help?" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>              <!-- Hidden field for subject -->
+              <input type="hidden" name="_subject" value="New submission from OpExec Group website" />
+              <!-- Forward to specific email -->
+              <input type="hidden" name="_replyto" value="info@opexecgroup.com" />
+              <!-- Honeypot anti-spam field -->
+              <input type="text" name="_gotcha" style="display:none" />              
+              <!-- Redirect after submission -->
+              <input type="hidden" name="_next" value="https://lk2161fc.github.io/opexecgroup-testsite/thank-you.html" />
               <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700">
                 SEND
               </button>
