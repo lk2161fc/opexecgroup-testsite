@@ -133,32 +133,65 @@
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="md:w-1/2">          <div class="bg-white p-6 rounded-lg shadow-lg">            <h3 class="text-xl font-semibold text-gray-900 mb-4">Send Us a Message</h3>            <form class="space-y-6" action="https://formspree.io/f/xvgaeard" method="POST">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input type="text" name="name" placeholder="Name" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
-                <input type="email" name="email" placeholder="Email*" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required />
-              </div>
-              <input type="tel" name="phone" placeholder="Phone" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
-              <textarea name="message" rows="4" placeholder="How can we help?" class="px-4 py-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>              <!-- Hidden field for subject -->
-              <input type="hidden" name="_subject" value="New submission from OpExec Group website" />              <!-- Primary recipient -->
-              <input type="hidden" name="_to" value="lk2161fc+opexecgroupcontactform@gmail.com" />
-              <!-- CC to other email -->
-              <input type="hidden" name="_cc" value="info@opexecgroup.com" />
-              <!-- Honeypot anti-spam field -->
-              <input type="text" name="_gotcha" style="display:none" />              
-              <!-- Redirect after submission -->
-              <input type="hidden" name="_next" value="https://lk2161fc.github.io/opexecgroup-testsite/thank-you.html" />
-              <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700">
-                SEND
-              </button>
-              <p class="text-xs text-gray-500 text-center mt-2">
-                This site is protected by reCAPTCHA and the Google 
-                <a href="https://policies.google.com/privacy" class="text-blue-600 hover:underline">Privacy Policy</a> and 
-                <a href="https://policies.google.com/terms" class="text-blue-600 hover:underline">Terms of Service</a> apply.
-              </p>
-            </form>
+        </div>          <div class="md:w-1/2">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Send Us a Message</h3>            <div id="form-container" class="overflow-hidden">
+              <iframe id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfUSkOl9hiTflOHMENscBtQETeqAmCkO6GNryh0SD8UKHgmYA/viewform?embedded=true&usp=pp_url" 
+                width="100%" height="840" frameborder="0" marginheight="0" marginwidth="0">
+                Loading...
+              </iframe>
+            </div>
+            
+            <script>
+              // More robust iframe height adjustment
+              window.addEventListener('message', function(event) {
+                // Only accept messages from Google Forms domain
+                if (event.origin.indexOf('google.com') < 0) return;
+                
+                try {
+                  if (event.data && typeof event.data === 'string') {
+                    // Check if the message contains form submission confirmation
+                    if (event.data.indexOf('formSubmitted') > -1) {
+                      // Form was successfully submitted
+                      console.log('Form submitted successfully');
+                      // You can add custom behavior here, like showing a thank you message
+                    }
+                    
+                    // Parse the message if it's a string containing height information
+                    if (event.data.indexOf('scrollHeight') > -1) {
+                      var height = parseInt(event.data.replace(/.*scrollHeight:(\d+).*/, '$1'));
+                      if (!isNaN(height)) {
+                        document.getElementById('google-form').style.height = height + 20 + 'px';
+                      }
+                    }
+                  }
+                } catch (e) {
+                  console.log('Error handling form events:', e);
+                }
+              });
+              
+              // Fallback for older browsers or if message event doesn't work
+              document.getElementById('google-form').onload = function() {
+                setTimeout(function() {
+                  try {
+                    var iframe = document.getElementById('google-form');
+                    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    iframe.style.height = Math.max(innerDoc.body.scrollHeight, 840) + 'px';
+                    
+                    // Note: Direct access to form elements inside the iframe may be 
+                    // limited due to cross-origin security restrictions
+                  } catch (e) {
+                    console.log('Fallback height adjustment failed:', e);
+                  }
+                }, 1000);
+              };
+            </script>
+            
+            <p class="text-xs text-gray-500 text-center mt-4">
+              Your information will be processed in accordance with our privacy practices and Google's 
+              <a href="https://policies.google.com/privacy" class="text-blue-600 hover:underline">Privacy Policy</a>.
+              After submission, you'll receive a confirmation email.
+            </p>
           </div>
         </div>
       </div>
