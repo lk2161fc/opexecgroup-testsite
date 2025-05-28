@@ -1,0 +1,40 @@
+{
+  "name": "opexecgroup-testsite",
+  "version": "1.0.0",
+  "description": "This repository contains the official website for OpExec Group, a supply chain and operations consulting company.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.jsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "axios": "^1.6.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lk2161fc/opexecgroup-testsite.git"
+  },
+  "keywords": ["react", "consulting", "supply-chain", "operations"],
+  "author": "OpExec Group",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lk2161fc/opexecgroup-testsite/issues"
+  },
+  "homepage": "https://github.com/lk2161fc/opexecgroup-testsite#readme"
+}
